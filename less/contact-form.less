@@ -1,0 +1,43 @@
+@import "variables.less";
+
+.contact-form {
+  width: @form-width;
+  max-width: @form-max-width;
+  margin: 0 auto;
+  padding: @padding;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: @button-radius;
+  margin-top: @padding; // Espacio reducido para el header
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: @secondary-color;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid @secondary-color;
+    border-radius: @button-radius;
+  }
+
+  button {
+    background: @primary-color;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: @button-radius;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+
+    &:hover {
+      background: darken(@primary-color, 10%);
+    }
+  }
+}

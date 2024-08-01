@@ -1,0 +1,63 @@
+/* info.less */
+#info {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px;
+}
+
+.info-box {
+  width: 100%;
+  max-width: 300px; /* Ancho máximo de cada caja de información */
+  border: 2px solid #ddd; /* Borde gris claro */
+  border-radius: @border-radius; /* Bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  background-color: #f9f9f9; /* Fondo blanco */
+  padding: 10px;
+}
+
+.info-content {
+  text-align: center;
+}
+
+.info-box img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd; /* Borde inferior de la imagen */
+}
+
+.info-box h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+#testimonios {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background: #f4f4f4;
+
+  .testimonio {
+    flex: 1;
+    margin: 0 10px;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+}
+
+#historias-exito {
+  padding: 2rem;
+  text-align: center;
+
+  .historia {
+    margin: 1rem 0;
+
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.programs-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    .program-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px @shadow-color;
+        margin: 20px;
+        overflow: hidden;
+        width: 400px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .program-content {
+            padding: 20px;
+            text-align: center;
+
+            h2 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: @link-color;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

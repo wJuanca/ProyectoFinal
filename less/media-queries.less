@@ -1,0 +1,62 @@
+/* Media Queries */
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #more-info, #additional-info, #rescued-animals, #donaciones {
+      max-width: 90%;
+    }
+  
+    .animal-panels {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .animal-panel {
+      width: 100%;
+    }
+  
+    .preset-amounts {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    #donation-amount {
+      width: 100%;
+    }
+  
+    .modal-content {
+      width: 90%;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+      main {
+          padding: @padding-main-mobile;
+      }
+  
+      section {
+          width: 100%;
+          max-width: 100%;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      h2 {
+          font-size: 1.5rem;
+      }
+  
+      p {
+          font-size: 1rem;
+      }
+  }
+  

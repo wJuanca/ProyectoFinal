@@ -1,0 +1,42 @@
+/* background.less */
+#background-section {
+  background: url('img/back.jpg') no-repeat center center/cover;
+  padding: 40px 20px;
+  color: #e0e0e0;
+  text-align: center;
+  position: relative;
+}
+
+
+.background-content {
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para el texto */
+  padding: 20px;
+  border-radius: @border-radius;
+  display: inline-block;
+}
+
+/*** nosotros ***/
+
+/* Contenedor del fondo */
+.background-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+/* Fondo superior */
+.top-background {
+  width: 100%;
+  height: 50%; /* Ocupa la mitad superior del fondo */
+  background-color: #e0e0e0; /* Color del fondo superior */
+}
+
+/* Fondo inferior */
+.bottom-background {
+  width: 100%;
+  height: 90%; /* Ocupa la mitad inferior del fondo */
+  background-color: #eceff1; /* Color del fondo inferior */
+}

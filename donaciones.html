@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones</title>
+    <link rel="stylesheet" href="less/styles.less">
+    <link rel="stylesheet" href="stylesss.css">
+    <link rel="stylesheet" href="less/styles.less">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+<body>
+    {{>header}}
+    <main>
+        <section id="donaciones">
+            <img src="img/banner-dog.jpg" alt="Banner" id="banner">
+            <h2>Apoya con tu donación</h2>
+            <p>Tu donación será utilizada para rescatar y cuidar a perros de la calle, proporcionando refugio, atención médica y un hogar amoroso.</p>
+            <div class="donation-card">
+                <div id="donation-section">
+                    <input type="number" id="donation-amount" placeholder="Ingresa la cantidad">
+                    <div class="preset-amounts">
+                        <button class="preset" data-amount="10">$10</button>
+                        <button class="preset" data-amount="20">$20</button>
+                        <button class="preset" data-amount="50">$50</button>
+                    </div>
+                    <button id="donate-button">Donar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="more-info">
+            <h2>Más Información</h2>
+            <p>Nuestra ONG se dedica a rescatar perros abandonados, brindándoles la atención que necesitan y ayudándolos a encontrar un hogar permanente. Cada donación hace una gran diferencia en la vida de estos animales.</p>
+        </section>
+
+        <section id="rescued-animals">
+            <h2>Animales Rescatados</h2>
+            <div class="animal-panels">
+                <div class="animal-panel">
+                    <img src="img/panel-dog1.jpg" alt="Perro rescatado 1">
+                    <div class="animal-description">
+                        <p>Ellos son Miguel y Rodo, rescatados de las calles y ahora viviendo en un hogar feliz.</p>
+                    </div>
+                </div>
+                <div class="animal-panel">
+                  <img src="img/panel-dog3.jpg" alt="Perro rescatado 2">
+                  <div class="animal-description">
+                      <p>Este es Luna, encontrada en malas condiciones y ahora recuperada gracias a tu apoyo.</p>
+                  </div>
+              </div>
+                <div class="animal-panel">
+                    <img src="img/panel-dog2.jpg" alt="Perro rescatado 3">
+                    <div class="animal-description">
+                        <p>Este perro fue rescatado de una casa donde era maltratado por su antigua familia.</p>
+                    </div>
+                </div>
+                <div class="animal-panel">
+                  <img src="img/panel-dog4.jpg" alt="Perro rescatado 3">
+                  <div class="animal-description">
+                      <p>El es Rafael, lo encontramos en la calle buscando entre la basura y ahora cuenta con una gran familia.</p>
+                  </div>
+              </div>
+              <div class="animal-panel">
+                <img src="img/panel-dog5.jpg" alt="Perro rescatado 3">
+                <div class="animal-description">
+                    <p>El es un perro abandonado por su familia y que fue rescatado por uno de nuetros colaboradores.</p>
+                </div>
+            </div>
+                
+            </div>
+        </section>
+
+        <section id="additional-info">
+            <h2>Más Información</h2>
+            <p>Además de rescatar y cuidar a los perros, también educamos a la comunidad sobre la importancia del cuidado animal y la adopción responsable. Con tu ayuda, podemos continuar con nuestra misión y salvar más vidas.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo-desc">
+            <img src="img/logo.png" alt="Logo de Huellas de Amor" class="footer-logo">
+            <p class="footer-description">
+              En Fundación Huellas de Amor, nos dedicamos a rescatar y cuidar mascotas en situación de vulnerabilidad, proporcionándoles amor y cuidado hasta encontrarles un hogar permanente.
+            </p>
+          </div>
+      
+          <div class="footer-menu">
+            <h3>Menú</h3>
+            <ul>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="donaciones.html">Donar</a></li>
+              <li><a href="#voluntariado">Voluntariado</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; 2024 Fundación Huellas de Amor. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Información de la tarjeta</h2>
+            <form id="donation-form">
+                <label for="card-number">Número de tarjeta:</label>
+                <input type="text" id="card-number" required>
+                <label for="card-expiry">Fecha de expiración:</label>
+                <input type="text" id="card-expiry" required>
+                <label for="card-cvc">CVC:</label>
+                <input type="password" id="card-cvc" required>
+                <button type="button" id="cancel-button">Cancelar</button>
+                <button type="submit">Donar</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script src="FAQ.js" type="module"></script>
+</body>
+</html>

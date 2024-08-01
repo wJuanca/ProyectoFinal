@@ -1,0 +1,30 @@
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo-desc">
+      <img src="{{footer.logoSrc}}" alt="Logo de {{footer.companyName}}" class="footer-logo">
+      <p class="footer-description">
+        {{footer.description}}
+      </p>
+    </div>
+
+    <div class="footer-menu">
+      <h3>Menú</h3>
+      <ul>
+        {{#each footer.menuItems}}
+        <li><a href="{{this.link}}">{{this.text}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Síguenos</h3>
+      {{#each footer.socialLinks}}
+      <a href="{{this.url}}" class="social-icon"><i class="{{this.iconClass}}"></i></a>
+      {{/each}}
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <p>&copy; {{footer.year}} {{footer.companyName}}. Todos los derechos reservados.</p>
+  </div>
+</footer>

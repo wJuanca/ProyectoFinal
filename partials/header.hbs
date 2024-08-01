@@ -1,0 +1,24 @@
+<header>
+    <div class="header-container">
+        <div class="logo-title">
+            <img src="img/logo.png" alt="Logo de Huellas de Amor" class="logo">
+            <h1 class="site-title">{{title}}</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                {{#each menuOptions}}
+                    {{#if this.active}}
+                        <li><span class="active">{{label}}</span></li>
+                    {{else}}
+                        <li><a href="{{url}}">{{label}}</a></li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,15 @@
+/* Contenedor principal */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Permite que el contenedor se expanda */
+    position: relative;
+    z-index: 1; /* Asegura que el contenedor esté sobre los fondos */
+}
+
+/* Asegurar que el contenido principal tenga suficiente espacio de separación */
+.container > *:not(.header, .footer) {
+    margin-bottom: 40px; /* Espacio adicional para evitar que las secciones peguen al pie de página y al encabezado */
+}

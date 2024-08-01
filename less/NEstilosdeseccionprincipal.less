@@ -1,0 +1,31 @@
+.main-section {
+    position: relative;
+    text-align: center;
+    color: @text-color;
+
+    img {
+        width: 100%;
+        height: 600px; // Ajusta esta altura según tu preferencia
+        object-fit: cover; // Asegura que la imagen cubra el área sin distorsionarse
+    }
+
+    .main-text-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: @overlay-color;
+        padding: 20px;
+        border-radius: 10px;
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    }
+}

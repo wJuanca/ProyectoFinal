@@ -1,0 +1,310 @@
+@primary-color: #03a9f4;
+@secondary-color: #feffff;
+@hover-color: #ffffff;
+@bg-color: #b7b2b2;
+@text-color: #fff;
+@font-color: #f4e4e477;
+@dark-gray: #8e8e8e;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+
+
+
+.container-cover {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(/img/portada1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(5, 33, 50, 0.8); /*Con este se puede modificar el "color" del Hero Panel*/
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container-info-cover {
+        max-width: 800px;
+        height: 500px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        h1 {
+            font-size: 60px;
+            font-weight: 500;
+            color: @text-color;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: @text-color;
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+}
+
+.container-content {
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    article {
+        width: 100%;
+        padding: 20px;
+        padding-bottom: 40px;
+        box-shadow: -10px 0 20px -30px black;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: @primary-color;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 40px;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #887f7f;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.container-aside {
+    aside {
+        width: 320px;
+        box-shadow: 0 0 20px -20px black;
+        overflow: hidden;
+        border-radius: 6px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+
+        img {
+            width: 100%;
+        }
+
+        h2,
+        p {
+            margin-top: 20px;
+            padding: 0px 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            margin-left: 20px;
+            padding: 10px 50px;
+            font-size: 16px;
+            background: @primary-color;
+            border: none;
+            color: @text-color;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+    }
+}
+
+.container-footer {
+    width: 100%;
+    padding: 40px 0;
+    background: @bg-color;
+    margin-top: 40px;
+
+    footer {
+        max-width: 1200px;
+        margin: auto;
+
+        .logo-footer {
+            text-align: center;
+
+            img {
+                width: 100px;
+                border-radius: 2.5rem;
+            }
+        }
+
+        .redes-footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            .icon-redes-footer {
+                font-size: 20px;
+                margin: 20px;
+                background: #bebdbd;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                color: #4c597c;
+
+                &.fa-facebook:hover {
+                    background-color: #0c81b7;
+                    color: @text-color;
+                }
+
+                &.fa-x-twitter:hover {
+                    background-color: #1a2d35;
+                    color: @text-color;
+                }
+
+                &.fa-instagram:hover {
+                    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+                    color: @text-color;
+                }
+            }
+        }
+
+        hr {
+            margin-top: 20px;
+            border: none;
+            height: 2px;
+            background: #7a7a7a;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 40px;
+            color: @dark-gray;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .header-content,
+    .container-content,
+    .container-footer footer {
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .container-content {
+        width: 100%;
+        flex-direction: column;
+
+        article {
+            box-shadow: 0 0 0 0;
+        }
+    }
+
+    .container-aside {
+        display: flex;
+        justify-content: center;
+
+        aside {
+            max-width: 300px;
+            margin: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container-all {
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all {
+        transform: translateX(300px);
+    }
+
+    .menu {
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: @text-color;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+
+        &.show-lateral {
+            width: 300px;
+            transform: translateX(0px);
+        }
+
+        nav ul {
+            flex-direction: column;
+
+            li {
+                max-width: 200px;
+                height: 50px;
+                justify-content: flex-start;
+
+                &.menu-selected:before {
+                    width: 0;
+                }
+
+                a {
+                    margin-top: 40px;
+                    color: #858585;
+
+                    i {
+                        width: 20px;
+                        display: inline-block;
+                        margin-right: 10px;
+                        color: #46a2fd;
+                    }
+                }
+            }
+        }
+    }
+
+    #icon-menu {
+        display: block;
+    }
+
+    .container-aside {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,47 @@
+@import "variables.less";
+
+.gallery {
+  padding: @padding;
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: @padding;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 calc(33.333% - @padding);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: @button-radius;
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+  .gallery .card {
+    flex: 1 1 calc(50% - @padding);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery .card {
+    flex: 1 1 100%;
+  }
+
+  .contact-form button {
+    font-size: 0.875rem;
+  }
+}

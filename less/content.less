@@ -1,0 +1,43 @@
+/* Estilo para el contenido principal */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex: 1; /* Permite que el contenido se expanda para ocupar el espacio disponible */
+    margin: 20px 0; /* Espacio arriba y abajo del contenido */
+}
+
+/* Estilo para las secciones de misión y visión */
+.mission, .vision {
+    width: 45%; /* Ampliar el ancho de las secciones */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #f39c12; /* Color y grosor del marco */
+    border-radius: 5px; /* Bordes redondeados del marco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    background-color: #e0e1e5; /* Fondo blanco para las secciones */
+    margin-bottom: 20px; /* Espacio debajo de cada sección */
+    transition: transform 0.3s, background-color 0.3s; /* Añade transición para la animación */
+}
+
+/* Animación al pasar el mouse por encima */
+.mission:hover, .vision:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta */
+    background-color: #bdc0ff; /* Cambia el color de fondo ligeramente */
+}
+
+/* Separación adicional entre las secciones */
+.vision {
+    margin-left: 5%; /* Espacio a la izquierda de la sección de visión */
+}
+
+
+/* Estilo para los encabezados */
+h2 {
+    text-align: center;
+}
+
+/* Estilo para los párrafos */
+p {
+    text-align: center;
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+}

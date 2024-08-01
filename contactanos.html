@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="less/styles.less">
+    <link rel="stylesheet" href="less/styles.less">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+<body>
+    {{>header}}
+
+    <section class="contact-form">
+        <h2>Contactanos </h2>
+        <form action="#">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="gallery">
+        <h2>No los dejes a su suerte</h2>
+        <div class="images">
+            <div class="card">
+                <img src="img/perrito 1.jpg" alt="Animalito 1">
+            </div>
+            <div class="card">
+                <img src="img/perrito 2.jpg" alt="Animalito 2">
+            </div>
+            <div class="card">
+                <img src="img/perrito 3.jpg" alt="Animalito 3">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo-desc">
+            <img src="img/logo.png" alt="Logo de Huellas de Amor" class="footer-logo">
+            <p class="footer-description">
+              En Fundación Huellas de Amor, nos dedicamos a rescatar y cuidar mascotas en situación de vulnerabilidad, proporcionándoles amor y cuidado hasta encontrarles un hogar permanente.
+            </p>
+          </div>
+      
+          <div class="footer-menu">
+            <h3>Menú</h3>
+            <ul>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="donaciones.html">Donar</a></li>
+              <li><a href="#voluntariado">Voluntariado</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-social">
+            <h3>Síguenos</h3>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; 2024 Fundación Huellas de Amor. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+    <script src="main.js" type="module"></script>
+    <script src="FAQ.js" type="module"></script>
+</body>
+</html>

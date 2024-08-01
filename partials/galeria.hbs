@@ -1,0 +1,31 @@
+<section class="gallery">
+    <div class="gallery-section">
+        <h2 class="section-title">Eventos Pasados</h2>
+        <div class="gallery-group">
+            {{#each galleryItems.eventosPasados}}
+            <div class="gallery-item">
+                <img src="{{this.imageUrl}}" alt="{{this.altText}}" class="gallery-image">
+                <div class="description">
+                    <h3 class="image-title">{{this.title}}</h3>
+                    <p class="image-description">{{this.description}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <h2 class="section-title">Trabajo de la Organización</h2>
+        <div class="gallery-group">
+            {{#each galleryItems.trabajoOrganizacion}}
+            <div class="gallery-item">
+                <img src="{{this.imageUrl}}" alt="{{this.altText}}" class="gallery-image">
+                <div class="description">
+                    <h3 class="image-title">{{this.title}}</h3>
+                    <p class="image-description">{{this.description}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
