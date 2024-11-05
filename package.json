@@ -15,5 +15,8 @@
     "vite-plugin-handlebars": "^1.6.0",
     "vite-plugin-minify": "^1.5.2",
     "vite-plugin-purgecss": "^0.2.12"
+  },
+  "dependencies": {
+    "react-google-recaptcha": "^3.1.0"
   }
 }

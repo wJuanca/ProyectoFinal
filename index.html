@@ -9,10 +9,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.csss">
+
+  <style>
+    /* Estilos para el modal */
+    #captcha-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    /* Contenedor de reCAPTCHA en el modal */
+    #captcha-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+  </style>
+
 </head>
 
 <body>
   {{>header}}
+
+  <div id="captcha-modal" style="display: none;"> <!-- Ocultar inicialmente el modal -->
+    <div id="captcha-content">
+      <h2>Verificación de Seguridad</h2>
+      <p>Por favor, verifica que no eres un robot para acceder al sitio.</p>
+      <div class="g-recaptcha" data-sitekey="6LeM_HEqAAAAAOCvnwNPPm_QW1OiOzXqJDZnv7i0" data-callback="captchaVerified"></div>
+      <p id="captcha-message" style="color: red;"></p>
+    </div>
+  </div>
 
   <main>
     <h1>HUELLAS DE AMOR</h1>
@@ -193,6 +229,34 @@
   <script src="FAQ.js" type="module"></script>
   <script src="carrusel.js" type="module"></script>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    // Función que se ejecuta al cargar la página
+    window.onload = function () {
+      // Verificar si el captcha ya ha sido completado
+      const captchaVerified = localStorage.getItem('captchaVerified');
+
+      // Si no ha sido verificado, mostrar el modal
+      if (!captchaVerified) {
+        document.getElementById('captcha-modal').style.display = 'flex';
+        document.body.classList.add('blur-background'); // Aplicar efecto de desenfoque
+      }
+    };
+
+    // Función que se ejecuta cuando se completa el captcha
+    function captchaVerified() {
+      // Almacenar en localStorage que el captcha fue verificado
+      localStorage.setItem('captchaVerified', 'true');
+      // Ocultar el modal y quitar el desenfoque
+      document.getElementById('captcha-modal').style.display = 'none';
+      document.body.classList.remove('blur-background'); // Quitar efecto de desenfoque
+    }
+
+    // Mostrar mensaje de error en caso de que la verificación falle
+    function showError(message) {
+      document.getElementById('captcha-message').innerText = message;
+    }
+  </script>
 </body>
 
 </html>

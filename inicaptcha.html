@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación reCAPTCHA</title>
+    <link rel="stylesheet" href="less/styles.less">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <section class="captcha-verification">
+        <h2>Verificación de Seguridad</h2>
+        <form id="captchaForm">
+            <div class="g-recaptcha" data-sitekey="6LeM_HEqAAAAAOCvnwNPPm_QW1OiOzXqJDZnv7i0"></div>
+            <button type="submit">Acceder</button>
+        </form>
+    </section>
+
+    <div id="content" style="display: none;">
+        <!-- Aquí va el contenido de la página que se mostrará después de la verificación -->
+        <h1>Bienvenido a la Página</h1>
+        <p>Este es el contenido protegido que se muestra después de la verificación de reCAPTCHA.</p>
+    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        document.getElementById('captchaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío por defecto
+
+            const response = grecaptcha.getResponse(); // Obtener la respuesta de reCAPTCHA
+            if (response.length === 0) {
+                alert("Por favor completa el reCAPTCHA.");
+                return; // Si no se completa, detener el envío
+            }
+
+            // Si se completa el reCAPTCHA, muestra el contenido
+            document.getElementById('content').style.display = 'block';
+            alert("Verificación exitosa. Accediendo al contenido.");
+            // O redirigir a otra página si lo prefieres
+        });
+    </script>
+</body>
+</html>
