@@ -230,33 +230,30 @@
   <script src="carrusel.js" type="module"></script>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <script>
-    // Función que se ejecuta al cargar la página
     window.onload = function () {
-      // Verificar si el captcha ya ha sido completado
+      // Primero verificamos si el usuario 
       const captchaVerified = localStorage.getItem('captchaVerified');
 
-      // Si no ha sido verificado, mostrar el modal
+      // Si el usuario aun no hizo el captcha se mostrara el modal
       if (!captchaVerified) {
         document.getElementById('captcha-modal').style.display = 'flex';
         document.body.classList.add('blur-background'); // Aplicar efecto de desenfoque
       }
     };
 
-    // Función que se ejecuta cuando se completa el captcha
+    // Con esta funcion se elimina el blur del fondo
     function captchaVerified() {
-      // Almacenar en localStorage que el captcha fue verificado
       localStorage.setItem('captchaVerified', 'true');
-      // Ocultar el modal y quitar el desenfoque
       document.getElementById('captcha-modal').style.display = 'none';
-      document.body.classList.remove('blur-background'); // Quitar efecto de desenfoque
+      document.body.classList.remove('blur-background');
     }
-
-    // Mostrar mensaje de error en caso de que la verificación falle
     function showError(message) {
       document.getElementById('captcha-message').innerText = message;
     }
   </script>
+
 </body>
 
 </html>

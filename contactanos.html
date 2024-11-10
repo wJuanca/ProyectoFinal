@@ -12,6 +12,7 @@
 <body>
     {{>header}}
 
+
     <section class="contact-form">
         <h2>Contactanos </h2>
         <form id="contactForm" action="#">
@@ -24,11 +25,12 @@
             <label for="message">Mensaje:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <div class="g-recaptcha" data-sitekey="6LeM_HEqAAAAAOCvnwNPPm_QW1OiOzXqJDZnv7i0"></div> <!-- Aquí se agrega el reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6LeM_HEqAAAAAOCvnwNPPm_QW1OiOzXqJDZnv7i0"></div>
 
             <button type="submit">Enviar</button>
         </form>
     </section>
+
 
     <section class="gallery">
         <h2>No los dejes a su suerte</h2>
@@ -78,21 +80,20 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- Script de reCAPTCHA -->
     <script src="main.js" type="module"></script>
     <script src="FAQ.js" type="module"></script>
+
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evitar el envío por defecto
+            event.preventDefault();
 
-            const response = grecaptcha.getResponse(); // Obtener la respuesta de reCAPTCHA
+            const response = grecaptcha.getResponse();
             if (response.length === 0) {
                 alert("Por favor completa el CAPTCHA");
-                return; // Si no se completa, detener el envío
+                return;
             }
 
-            // Simular el envío del formulario
             console.log("Formulario enviado");
-            // Limpiar el formulario
             event.target.reset();
-            grecaptcha.reset(); // Reiniciar reCAPTCHA
+            grecaptcha.reset(); 
         });
     </script>
 </body>
